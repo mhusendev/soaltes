@@ -1,0 +1,33 @@
+<script type="text/javascript">
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+         var data=JSON.parse(xhttp.responseText);
+          var html = "<table border=\"1px\" width=\"100% \" cellspacing=\"0\"><thead><tr><th>author</th><th>description</th><th>language</th></tr></thead>";
+         data.forEach(function(element) {
+      
+           html += "<tbody><tr><td>" + element.author + "</td><td>" + element.description + "</td><td>"+element.language+"</td></tr></tbody>";
+
+
+
+
+    });
+          html = html + "</table>";
+      document.getElementById("data").innerHTML = html;
+
+
+      }
+  };
+  xhttp.open("GET", "https://github-trending-api.now.sh/repositories", true);
+  xhttp.send();
+
+ </script>
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title></title>
+ </head>
+ <body>
+<div id="data"></div>
+ </body>
+ </html>

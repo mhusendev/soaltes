@@ -1,0 +1,20 @@
+{
+  "name": "soaltes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muhammad Husen",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "hbs": "^4.1.1",
+    "mime": "^2.4.6",
+    "mongoose": "^5.9.26",
+    "path": "^0.12.7"
+  }
+}
